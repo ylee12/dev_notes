@@ -1,0 +1,59 @@
+# diff with previous commit
+ git diff HEAD^
+
+#diff between two commits (from older commit to newer commit)
+git diff ae8187c..f044560 
+
+#modify committed message
+git commit --amend
+
+#To Undo
+
+#discard changes in local working folder(s)
+git checkout --  test/test1.rb test/test2.rb
+
+#Discard all the current local changes and reset to the latest commit
+git reset HEAD --hard
+
+# Reset to the previous commit 
+git reset head^ --hard
+
+
+# show the last git 5 commits
+git log -5
+
+# show the last git 5 commits with concise message	
+git log -10 --oneline
+
+
+# adding local repo to remote
+git remote add origin git@github.com:ylee12/git_exercise_1.git
+git push -u origin master
+
+
+# create a new branch
+git branch feature-1
+
+# switch to a branch
+git checkout feature-1
+
+# create a new branvh and switch to it all at once
+git checkout -b feature-5
+
+# show where/which branh currently in
+git branch
+
+# merge branch
+git checkout master
+git merge feature-1
+
+# push a new branch to remote 
+git push --set-upstream origin feature-1
+
+
+# delete a local branch
+git branch -d feature-1
+
+# delete a remote branch
+git push -d origin feature-1
+
